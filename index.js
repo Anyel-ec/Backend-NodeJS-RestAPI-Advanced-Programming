@@ -6,6 +6,7 @@ const verifyDataRoutes = require('./src/routes/verifyDataRoutes');
 const loadDataRoutes = require('./src/routes/loadDataRoutes'); 
 const verifyDocument = require('./src/routes/verifyDocumentRoutes'); 
 const uploadDocument = require('./src/routes/uploadDocumentRoutes'); 
+const userRoute = require('./src/routes/userRoute'); 
 
 
 const envLoader = new EnvLoader(); 
@@ -30,6 +31,7 @@ connectDB().then(() => {
   app.use('/api/load', loadDataRoutes); 
   app.use('/api/verifyDocument', verifyDocument); 
   app.use('/api/uploadDocument', uploadDocument); 
+  app.use('/api/users', userRoute); 
 
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
