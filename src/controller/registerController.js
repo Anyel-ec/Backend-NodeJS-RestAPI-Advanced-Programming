@@ -315,7 +315,7 @@ exports.createOrUpdateRegister = async (req, res) => {
       await db.collection("verifyData").insertOne(verifyData);
 
       const htmlContent = Registro(name);
-      emailService.sendEmail(email, "Real Agency - Register", htmlContent);
+      emailService.sendEmail(email, "REGISTRO EXITOSO", htmlContent);
 
       res.json({
         state: "exito",
@@ -349,7 +349,7 @@ exports.createOrUpdateRegister = async (req, res) => {
       await db.collection("verifyData").insertOne(verifyData);
 
       const htmlContent = Registro(name);
-      emailService.sendEmail(email, "Real Agency - Register", htmlContent);
+      emailService.sendEmail(email, "REGISTRO EXITOSO", htmlContent);
 
       res.status(201).json({
         state: "exito",
